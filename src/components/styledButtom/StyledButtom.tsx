@@ -3,9 +3,10 @@ import { ReactNode } from "react";
 
 interface StyledButtonProps {
     children: ReactNode;
+    onClick: () => void
 }
 
-const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {  // Desestruture o children aqui
+const StyledButton: React.FC<StyledButtonProps> = ({ children,onClick }) => {  // Desestruture o children aqui
     const CustomButton = styled("button")(({ theme }) => ({
         backgroundColor: "transparent",
         border: `1px solid ${theme.palette.primary.contrastText}`,
@@ -24,7 +25,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {  // Desest
 
     return (
         <>
-            <CustomButton>{children}</CustomButton>   
+            <CustomButton onClick={onClick}>{children}</CustomButton>   
         </>
     );
 }
