@@ -46,6 +46,7 @@ const Project = () => {
       sx={{ 
         py: 8,
         minHeight: '100vh',
+        
         position: 'relative',
         display: 'flex',
         alignItems: 'center',
@@ -57,10 +58,11 @@ const Project = () => {
           width: '100%',
           height: '100%',
           background: 'radial-gradient(circle at 20% 50%, rgba(100, 255, 218, 0.05) 0%, transparent 30%)',
+          
         }
       }}
     >
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+      <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1, padding:'2px'  }}>
         <Box sx={{ textAlign: 'center', mb: 6 }}>
           <Typography 
             variant="h2" 
@@ -71,7 +73,8 @@ const Project = () => {
               mb: 1,
               '&::after': {
                 content: '""',
-                display: 'block',
+                marginTop:'1px', marginBottom:'1px' ,
+                display: 'flex',
                 width: '80px',
                 height: '4px',
                 background: '#64ffda',

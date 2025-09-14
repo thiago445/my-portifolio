@@ -37,7 +37,7 @@ const StyledHero = styled("section")({
   position: "relative",
   minHeight: "100vh",
   display: "flex", 
-  alignItems: "center",
+  alignItems: "center ",
   justifyContent: "center",
   zIndex: 1,
   overflow: "hidden",
@@ -320,14 +320,6 @@ const Hero = () => {
             </IconButton>
           </Box>
         </Box>
-
-        {/* Indicador de scroll */}
-        <ScrollIndicator onClick={scrollToNextSection}>
-          <Typography variant="body2" sx={{ color: "#8892b0", mb: 1, fontSize: { xs: "0.7rem", sm: "0.8rem" } }}>
-            Scroll down
-          </Typography>
-          <KeyboardArrowDownIcon sx={{ fontSize: { xs: "1.5rem", sm: "2rem" } }} />
-        </ScrollIndicator>
       </Container>
     </StyledHero>
   );
