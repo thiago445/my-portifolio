@@ -1,8 +1,10 @@
+
 // src/pages/Home/Home.tsx
+import { Element} from "react-scroll";
 import React, { useRef } from "react";
-import NavBar from "../../components/NavBar/NavBar";
 import About from "./sections/About/About";
 import Hero from "./sections/Hero/Hero";
+import Contact from "./sections/Contact/Contact";
 import Project from "./sections/Projects/Projects";
 import { scroller } from "react-scroll";
 import Footer from "../../components/Footer/footer";
@@ -13,6 +15,7 @@ const Home = () => {
   const aboutRef = useRef<HTMLElement>(null);
   const skillsRef = useRef<HTMLElement>(null);
   const projectRef = useRef<HTMLElement>(null);
+  const contactRef = useRef<HTMLElement>(null);
 
   const handleScrollToSection = (sectionRef: React.RefObject<HTMLElement>) => {
     scroller.scrollTo(sectionRef.current?.id || "", {
@@ -43,6 +46,14 @@ const Home = () => {
         <section ref={projectRef} id="project" style={{ position: "relative", zIndex: 1 }}>
           <Project />
         </section>
+
+        
+        <Element name="contact">
+          <section ref={contactRef} id="contact" style={{ position: "relative", zIndex: 1 }}>
+            <Contact />
+          </section>
+        </Element>
+
 
         
         <Footer />

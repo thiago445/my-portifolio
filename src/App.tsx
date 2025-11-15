@@ -1,6 +1,6 @@
 // src/App.tsx
 import Home from "./pages/Home/Home";
-import BackgroundStars from "./components/backgound/BackgroundStars";
+import BackgroundStars from "./components/background/BackgroundStars";
 import { GlobalStyles } from "@mui/material";
 
 const App = () => {

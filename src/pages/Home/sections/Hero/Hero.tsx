@@ -1,10 +1,29 @@
-import React from 'react';
+import { scroller } from "react-scroll";
+
 import { Box, Container, Typography, styled, Button, IconButton, keyframes } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import profileImage from '../../../../assets/images/avatar.jpeg'
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
+const downloadCV = () => {
+  try {
+    const fileUrl = '/Currículo.pdf';
+    const fileName = 'Thiago_Vieira_Curriculo.pdf';
+    
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.download = fileName;
+    link.target = '_blank'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } catch (error) {
+    console.error('Erro ao baixar o currículo:', error);
+    
+  }
+};
 
 // Animação de digitação
 const typing = keyframes`
@@ -101,28 +120,9 @@ const ProfileImage = styled("img")(() => ({
   }
 }));
 
-// Indicador de scroll
-const ScrollIndicator = styled(Box)(({ theme }) => ({
-  position: "absolute",
-  bottom: "20px",
-  left: "55%",
-  transform: "translateX(-50%)",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  color: "#64ffda",
-  animation: `${fadeIn} 1s ease-out 1s both, ${float} 2s ease-in-out infinite`,
-  cursor: "pointer",
-}));
 
 
 const Hero = () => {
-  const scrollToNextSection = () => {
-    const aboutSection = document.getElementById("about");
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <StyledHero id="hero">
@@ -141,7 +141,7 @@ const Hero = () => {
         {/* Avatar */}
         <Box sx={{ textAlign: "center", mb: { xs: 2, md: 3 }, animation: `${fadeIn} 1s ease-out` }}>
           <ProfileImageWrapper>
-            <ProfileImage src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Thiago Vieira - Full Stack Developer" />
+            <ProfileImage src={profileImage} alt="Thiago Vieira - Full Stack Developer" />
           </ProfileImageWrapper>
         </Box>
 
@@ -224,7 +224,7 @@ const Hero = () => {
             }}
           >
             <Button
-              onClick={() => console.log("baixando")}
+              onClick={downloadCV}
               sx={{
                 backgroundColor: "rgba(255,255,255,0.9)",
                 border: "2px solid #64ffda",
@@ -247,7 +247,11 @@ const Hero = () => {
             </Button>
 
             <Button
-              onClick={() => console.log("contato")}
+               onClick={() => scroller.scrollTo("contact", {
+                  duration: 800,
+                  smooth: "easeInOutQuart",
+                  offset: -70
+                })}
               sx={{
                 backgroundColor: "#64ffda",
                 border: "2px solid #64ffda",
@@ -283,7 +287,7 @@ const Hero = () => {
             }}
           >
             <IconButton
-              href="https://linkedin.com/in/thiagovieira"
+              href="http://www.linkedin.com/in/thiago-vieira-09a45131b"
               target="_blank"
               sx={{ 
                 color: "#64ffda", 
@@ -301,7 +305,7 @@ const Hero = () => {
               <LinkedInIcon sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem" } }} />
             </IconButton>
             <IconButton
-              href="https://github.com/thiagovieira"
+              href="https://github.com/thiago445"
               target="_blank"
               sx={{ 
                 color: "#64ffda", 

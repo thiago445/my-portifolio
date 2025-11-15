@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import MyCard from '../../../../components/CardProject/cardProject';
 import scheduling from '../../../../assets/images/serviço.png';
 import icaros from '../../../../assets/images/icaros.png';
-import salaoBeleza from '../../../../assets/images/salao_beleza.png';
+
 
 interface Project {
   image: string;

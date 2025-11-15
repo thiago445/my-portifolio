@@ -3,9 +3,8 @@ import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
 import { useInView } from 'react-intersection-observer';
 import { useState } from 'react';
-import theme from "../../../../theme";
 import Button from "../../../../components/buttons/Buttons";
-import SectionSeparator from "../../../../components/SectionSeparator/SectionSeparator";
+
 
 const StyledAbout = styled("div")(({ theme }) => ({
     padding: "2rem",
