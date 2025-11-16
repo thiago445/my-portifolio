@@ -16,7 +16,7 @@
     "@mui/icons-material": "^6.1.6",
     "@mui/material": "^6.5.0",
     "@tsparticles/engine": "^3.9.1",
-    "@tsparticles/react": "^3.9.1",
+    "@tsparticles/react": "^3.7.1",
     "@tsparticles/slim": "^3.9.1",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.23.12",
