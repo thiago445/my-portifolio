@@ -2,15 +2,15 @@ import { scroller } from "react-scroll";
 
 import { Box, Container, Typography, styled, Button, IconButton, keyframes } from "@mui/material";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
-import profileImage from '../../../../assets/images/avatar.jpeg'
+import profileImage from '../../../../assets/images/foto2.jpg'
 import EmailIcon from "@mui/icons-material/Email";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const downloadCV = () => {
   try {
-    const fileUrl = '/Currículo.pdf';
-    const fileName = 'Thiago_Vieira_Curriculo.pdf';
+    const fileUrl = '/Curriculo_Thiago_Vieira_dev.pdf';
+    const fileName = 'Curriculo_Thiago_Vieira_dev.pdf';
     
     const link = document.createElement('a');
     link.href = fileUrl;

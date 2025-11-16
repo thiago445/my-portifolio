@@ -179,14 +179,14 @@ const Contact = () => {
                             <Box sx={{ mb: 3, cursor: 'pointer' }} onClick={() => window.open(linkedinUrl, '_blank')}>
                                 <LinkedInIcon fontSize="medium" sx={{ color: "#4fc3f7", mr: 1 }} />
                                 <Typography variant="body1" sx={{ color: "#b0c4de", display: 'inline', '&:hover': { color: '#64ffda' } }}>
-                                    /in/thiago
+                                    linkedin
                                 </Typography>
                             </Box>
 
                             <Box sx={{ mb: 3, cursor: 'pointer' }} onClick={() => window.open(githubUrl, '_blank')}>
                                 <GitHubIcon fontSize="medium" sx={{ color: "#4fc3f7", mr: 1 }} />
                                 <Typography variant="body1" sx={{ color: "#b0c4de", display: 'inline', '&:hover': { color: '#64ffda' } }}>
-                                    /thiago
+                                    github
                                 </Typography>
                             </Box>
                         </Box>
